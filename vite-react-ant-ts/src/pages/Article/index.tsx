@@ -19,7 +19,7 @@ export default function Index() {
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getList() as unknown as AnyAction);
+        dispatch(getList({ currentPage: 2, pageSize: 10}) as unknown as AnyAction);
     }, [])
 
     const { list, total } = useSelector((store: any) => store.article);
